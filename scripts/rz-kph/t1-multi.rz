@@ -1,0 +1,20 @@
+
+,fnm ::: Fn_Doc_Multi*;
+fnm \== default;
+
+,kenv ::: KCM_Env*;
+kenv \= (envv _$);
+
+fnm -> init kenv;
+
+,expand_sample ::: .[ScignStage_Tree_Table_Dialog*] .(int)  $-> extern;
+,show_graphic ::: .[ScignStage_Tree_Table_Dialog*] .(u8 u8 u8)  $-> extern;
+,close_graphic ::: .[ScignStage_Tree_Table_Dialog*] .(u8 u8 u8)  $-> extern;
+
+fnm -> read "expand_sample";
+fnm -> read "show_graphic";
+fnm -> read "close_graphic";
+
+
+fnm -> kph-gen-multi  "@/cpp/kph/gen-multi/t1.kph";
+

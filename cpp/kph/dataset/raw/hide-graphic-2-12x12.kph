@@ -1,0 +1,25 @@
+- 
+
+.
+%test: This test should cause an opened 2D 12x12 graphic window to close 
+and the corresponding checkbox to be uncheckeed.
+.
+%origin: @scripts/rz-kph
+.
+;sigma:1
+.
+;lambda:2
+.
+@ScignStage_Tree_Table_Dialog*::1
+.
+@str::2
+.
+#1
+.
+&:hide_graphic
+.
+1 :: 1 :: 1 :::#*ScignStage_Tree_Table_Dialog*
+.
+2 :: 1 :: 2 :::2-12x12
+.
+-
